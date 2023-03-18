@@ -5,7 +5,8 @@ const resultado = document.getElementById('resultado');
 function acaoNoFormulario(e) {
     e.preventDefault();
     const palavra = texto.value;
-    const separarPalavra = palavra.split('');
+    const converte = palavra.toLowerCase();
+    const separarPalavra = converte.split('');
     const inverterPalavra = separarPalavra.reverse('');
     const palavraInvertida = inverterPalavra.join('');
     if (palavra == palavraInvertida) {
