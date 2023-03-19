@@ -26,13 +26,39 @@ body {
 
 h1 {
     font-size: 4rem;
-    font-weight: 700;
+    font-weight: normal;
+}
+
+p {
+    font-size: 3rem;
+}
+
+form {
+    width: 45%;
 }
 
 input[type=text] {
     display: block;
     width: 100%;
     margin: 4rem 0;
-    padding: 1rem;
+    padding: 1.5rem 1rem;
+    outline: none;
+    -webkit-text-fill-color: var(--text-color);
+    font-size: 1rem;
+    background-color: var(--bg-color);
+    border: 3px solid var(--text-color);
+    color: var(--text-color);
 }
 
+input[type=submit], input[type=reset] {
+    outline: none;
+    background-color: var(--text-color);
+    border: none;
+    padding: 1.2rem 3.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+input[type=reset] {
+    margin-right: 2rem;
+}
