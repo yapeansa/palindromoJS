@@ -10,8 +10,9 @@ function acaoNoFormulario(e) {
     const palavraLower = palavra.toLowerCase();
     const separarPalavra = palavraLower.split('');
     const tudoJunto = [];
+    const alfabeto = 'abcdefghijklmnopqrstuvwxyz';
     separarPalavra.forEach(elemento => {
-        if (elemento != ' ')
+        if (alfabeto.includes(elemento))
             tudoJunto.push(elemento);
     });
     const textoNaOrdem = tudoJunto.join('');
