@@ -9,18 +9,24 @@ function acaoNoFormulario(e) {
     const palavra = texto.value;
     const palavraLower = palavra.toLowerCase();
     const separarPalavra = palavraLower.split('');
-    const inverterPalavra = separarPalavra.reverse('');
-    const palavraInvertida = inverterPalavra.join('');
+    const tudoJunto = [];
+    separarPalavra.forEach(elemento => {
+        if (elemento != ' ')
+            tudoJunto.push(elemento);
+    });
+    const textoNaOrdem = tudoJunto.join('');
+    const inverterPalavra = tudoJunto.reverse('');
+    const textoInvertido = inverterPalavra.join('');
 
-    resultado.innerHTML = palavra == '' ? '<p>Por favor, digite uma palavra.</p>' : verificaSeEPalindromo(palavra, palavraLower, palavraInvertida);
+    resultado.innerHTML = palavra == '' ? '<p>Por favor, digite uma palavra.</p>' : verificaSeEPalindromo(palavra, textoNaOrdem, textoInvertido);
 }
 
-function verificaSeEPalindromo (palavra, palavraLower, palavraInvertida) {
-    if (palavraLower == palavraInvertida) {
-        return `<p>A palavra ${palavra} é um palíndromo.</p>`;
+function verificaSeEPalindromo (palavra, textoNaOrdem, textoInvertido) {
+    if (textoNaOrdem == textoInvertido) {
+        return `<p>A texto digitado, "${palavra}", é um palíndromo.</p>`;
     }
     else {
-        return `<p>A palavra ${palavra} não é um palíndromo.`;
+        return `<p>A texto digitado, "${palavra}", não é um palíndromo.`;
     }
 }
 
