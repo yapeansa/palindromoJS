@@ -9,7 +9,7 @@ function acaoNoFormulario(e) {
     const separarPalavra = converte.split('');
     const inverterPalavra = separarPalavra.reverse('');
     const palavraInvertida = inverterPalavra.join('');
-    if (palavra == palavraInvertida) {
+    if (converte == palavraInvertida) {
         resultado.innerHTML = `<p>A palavra ${palavra} é um palíndromo.</p>`;
     }
     else {
