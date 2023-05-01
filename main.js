@@ -23,12 +23,7 @@ function acaoNoFormulario(e) {
 }
 
 function verificaSeEPalindromo (palavra, textoNaOrdem, textoInvertido) {
-    if (textoNaOrdem == textoInvertido) {
-        return `<p>A texto digitado, "${palavra}", é um palíndromo.</p>`;
-    }
-    else {
-        return `<p>A texto digitado, "${palavra}", não é um palíndromo.`;
-    }
+    return textoNaOrdem == textoInvertido ? `<p>A texto digitado, "${palavra}", é um palíndromo.</p>` : `<p>A texto digitado, "${palavra}", não é um palíndromo.`;
 }
 
 // Cuidando do placeholder
