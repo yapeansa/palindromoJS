@@ -11,9 +11,9 @@ function acaoNoFormulario(e) {
     const separarPalavra = palavraLower.split('');
     const tudoJunto = [];
     const alfabeto = 'abcdefghijklmnopqrstuvwxyz';
-    separarPalavra.forEach(elemento => {
-        if (alfabeto.includes(elemento))
-            tudoJunto.push(elemento);
+    separarPalavra.forEach(letra => {
+        if (alfabeto.includes(letra))
+            tudoJunto.push(letra);
     });
     const textoNaOrdem = tudoJunto.join('');
     const inverterPalavra = tudoJunto.reverse('');
@@ -33,6 +33,6 @@ function verificaSeEPalindromo (palavra, textoNaOrdem, textoInvertido) {
 
 // Cuidando do placeholder
 
-texto.addEventListener('focus', function () { this.placeholder = '' });
+texto.addEventListener('focus', () => this.placeholder = '');
 
-texto.addEventListener('blur', function () { this.placeholder = 'Digite uma palavra...' });
+texto.addEventListener('blur', () => this.placeholder = 'Digite uma palavra...');
